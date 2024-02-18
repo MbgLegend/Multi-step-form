@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #eef5ff;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Ubuntu", sans-serif;
+}
+.container {
+    height: 70vh;
+    min-width: 65vw;
+    max-width: 65vw;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+}
+.container .grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 3.75rem;
+}
+.container .grid aside {
+    height: 100%;
+    padding: 2rem 2.25rem;
+    background-image: url(assets/images/bg-sidebar-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0.85rem;
+}
+.container .grid aside ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2.15rem;
+}
+.container .grid aside ul li {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+.container .grid aside ul li.active button {
+    color: #000;
+    background-color:  hsl(206, 94%, 87%);
+    border-color:  hsl(206, 94%, 87%);
+}
+.container .grid aside ul li button {
+    border-radius: 50%;
+    width: 39px;
+    height: 39px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    font-family: "Ubuntu", sans-serif;
+}
+.container .grid aside ul li .text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.4rem;
+}
+.container .grid aside ul li .text h2 {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color:  hsl(229, 24%, 87%);
+}
+.container .grid aside ul li .text p {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+.container .grid article { 
+    padding: 2.65rem;
+    padding-bottom: 0.9rem;
+    padding-right: 5.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.container .grid article .content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.25rem;
+}
+.container .grid article .content .title {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.625rem;
+}
+.container .grid article .content .title h1 {
+    font-size: 2rem;
+    color: hsl(213, 96%, 18%);
+    line-height: 1.75;
+}
+.container .grid article .content .title p {
+    font-size: 1.045rem;
+    color:  hsl(231, 11%, 63%);
+    line-height: 1.75;
+}
+.container .grid article form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.275rem;
+}
+.container .grid article form .field {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.6rem;
+}
+.container .grid article form .field label {
+    color: hsl(213, 96%, 18%);
+}
+.container .grid article form .field input {
+    padding: 1.05rem;
+    font-size: 0.985rem;
+    border-radius: 0.35rem;
+    border: 1px solid hsla(231, 11%, 63%, 0.342);
+    font-family: "Ubuntu", sans-serif;
+}
+.container .grid article form .field input:focus {
+    outline: 1px solid hsl(213, 96%, 18%);
+}
+.container .grid article .boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.container .grid article .boxes .box {
+    border: 1px solid  hsla(231, 11%, 63%, 0.212);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.35rem;
+}
+.container .grid article .boxes .box.active {
+    border-color: #493efc;
+}
+.container .grid article .boxes .box img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 2.45rem;
+}
+.container .grid article .boxes .box > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.35rem;   
+}
+.container .grid article .boxes .box h2 {
+    font-size: 1.35rem;
+    color: hsl(213, 96%, 18%);
+}
+.container .grid article .boxes .box p {
+    color: hsl(231, 11%, 63%);
+}
+.container .grid article .boxes .box span {
+    color: #032959;
+}
+.container .grid article .swticher {
+    background-color: #f8f9fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0.925rem;
+    border-radius: 0.5rem;
+}
+.container .grid article .swticher button {
+    background-color: transparent;
+    border: none;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1rem;
+    color: hsl(231, 11%, 63%);
+    cursor: pointer;
+}
+.container .grid article .swticher button.active {
+    color: #032959;
+}
+.container .grid article .swticher .toggle {
+    width: 55px;
+    height: 26px;
+    background-color: #032959;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.container .grid article .swticher .toggle .toggle-cirlce {
+    width: 18px;
+    height: 18px;
+    background-color: #fdfdf7;
+    border-radius: 50%;
+    margin-left: 0.32rem;
+    transition: margin-left 0.35s;
+}
+.container .grid article .swticher .toggle.active .toggle-cirlce {
+    margin-left: 1.95rem;
+}
+.container .grid article .add-ons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+}
+.container .grid article .add-ons .add-on-box {
+    border: 1px solid  hsla(231, 11%, 63%, 0.212);
+    border-radius: 0.5rem;
+    padding: 1.2rem 1.35rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.container .grid article .add-ons .add-on-box.active {
+    border-color: #493efc;
+}
+.container .grid article .add-ons .add-on-box > div {
+    display: flex;
+    align-items: center;
+    gap: 1.65rem;
+}
+.container .grid article .add-ons .add-on-box > div input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    outline: 1px auto  rgba(255, 255, 255, 0.116);
+    cursor: pointer;
+}
+.container .grid article .add-ons .add-on-box > div input[type="checkbox"]:checked {
+    accent-color: #493efc;
+}
+.container .grid article .add-ons .add-on-box > div > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.35rem;
+}
+.container .grid article .add-ons .add-on-box > div > div h2 {
+    font-size: 1.2rem;
+    color: hsl(213, 96%, 18%);
+}
+.container .grid article .add-ons .add-on-box > div > div p {
+    color: hsl(231, 11%, 63%);
+}
+.container .grid article .add-ons .add-on-box  span {
+    color: #493efc;
+    font-weight: 500;
+}
+.container .grid article .reciept {
+    background-color: #f8f9fe;
+    padding: 1.35rem;
+    border-radius: 0.675rem;
+}
+.container .grid article .reciept .recipt-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.container .grid article .reciept .recipt-title > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.45rem;
+}
+.container .grid article .reciept .recipt-title > div h2 {
+    font-size: 1.25rem;
+    color: hsl(213, 96%, 18%);
+}
+.container .grid article .reciept .recipt-title > div span {
+    text-decoration: underline;
+    cursor: pointer;
+    color: hsl(231, 11%, 63%);
+    transition: color 0.35s;
+    width: fit-content;
+}
+.container .grid article .reciept .recipt-title > div span:hover {
+    color: hsl(243, 100%, 62%);
+}
+.container .grid article .reciept .recipt-title h3 {
+    color: hsl(213, 96%, 18%);
+}
+.container .grid article .reciept hr {
+    margin: 1.425rem 0;
+    border: none;
+    border-bottom: 1px solid #3333331f;
+}
+.container .grid article .reciept .selected-perks {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.35rem;
+}
+.container .grid article .reciept .recipt-feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .grid article .reciept .recipt-feature p {
+    color: hsl(231, 11%, 63%);
+}
+.container .grid article .reciept .recipt-feature span {
+    font-size: 1.125rem;
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+}
+.container .grid article .price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1.25rem;
+}
+.container .grid article .price p {
+    color: hsl(231, 11%, 63%);
+}
+.container .grid article .price span {
+    font-size: 1.35rem;
+    color: hsl(243, 100%, 62%);
+    font-weight: 500;
+}
+.container .grid article .content .center-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25rem;
+    align-items: center;
+    justify-content: center;
+}
+.container .grid article footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+.container .grid article footer .back {
+    background-color: transparent;
+    font-family: "Ubuntu", sans-serif;
+    border: none;
+    font-size: 1.075rem;
+    font-weight: 400;
+    cursor: pointer;
+    color:  hsl(231, 11%, 63%);
+}
+.container .grid article footer .forward {
+    margin-left: auto;
+    color: #fff;
+    padding: 0.85rem 1.25rem;
+    border-radius: 0.55rem;
+    font-size: 1.025rem;
+    font-weight: 500;
+    font-family: "Ubuntu", sans-serif;
+    background-color: hsl(213, 96%, 18%);
+    font-weight: 400;
+    cursor: pointer;
+}
+.container .grid article .content,
+.container .grid article .content .center-content {
+    height: 100%;
+}
+.container .grid article .content .center-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.15rem;
+    text-align: center;
+}
+.container .grid article .content .center-content h2 {
+    font-size: 2rem;
+    color: hsl(213, 96%, 18%);
+    line-height: 1.75;
+}
+.container .grid article .content .center-content p {
+    font-size: 1.025rem;
+    line-height: 1.85;
+    color: hsl(231, 11%, 63%);
+}
+
+@media (max-width: 1500px) {
+    .container {
+        max-width: 85vw;
+    }
+}
+
+@media (max-width: 940px) {
+    body {
+        min-height: 100%;
+        display: block;
+    }
+    .container {
+        min-width: 100%;
+        height: 100%;
+        padding: 0;
+        border-radius: 0;
+        position: relative;
+        background-color: transparent;
+    }
+    .container .grid {
+        grid-template-columns: 1fr;
+    }
+    .container .grid aside {
+        background-image: url(assets/images/bg-sidebar-mobile.svg);
+        background-size: cover;
+        background-color: #032959;
+        min-height: 26.5vh;
+    }
+    .container .grid aside ul {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .grid aside ul li .text {
+        display: none;
+    } 
+    .container .grid article { 
+        padding: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        display: block;
+    }
+    .container .grid article .content {
+        background-color: #fff;
+        width: 95vw;
+        margin: 0 auto;
+        padding: 1.65rem;
+        border-radius: 0.85rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 40%;
+    }
+    .container .grid article footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .container .grid article .boxes {
+        grid-template-columns: 1fr;
+    }
+    .container .grid article .boxes .box {
+        flex-direction: row;
+        align-items: center;
+        gap: 1.25rem;
+    }
+    .container .grid article .boxes .box img {
+        margin-bottom: 0rem;
+    }
+}
