@@ -15,7 +15,7 @@ body {
     font-family: "Ubuntu", sans-serif;
 }
 .container {
-    height: 70vh;
+    min-height: 70vh;
     min-width: 65vw;
     max-width: 65vw;
     background-color: #ffffff;
