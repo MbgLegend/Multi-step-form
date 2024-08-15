@@ -15,7 +15,6 @@ body {
     font-family: "Ubuntu", sans-serif;
 }
 .container {
-    min-height: 70vh;
     min-width: 65vw;
     max-width: 65vw;
     background-color: #ffffff;
@@ -364,6 +363,7 @@ body {
     background-color: hsl(213, 96%, 18%);
     font-weight: 400;
     cursor: pointer;
+    margin-top: 3rem;
 }
 .container .grid article .content,
 .container .grid article .content .center-content {
